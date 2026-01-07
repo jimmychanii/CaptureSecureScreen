@@ -1,0 +1,34 @@
+plugins {
+    id 'com.android.application'
+}
+android {
+    namespace 'com.xgs.cap'
+    compileSdk 35
+    defaultConfig {
+        applicationId "com.xgs.cap"
+        minSdk 24
+        //noinspection EditedTargetSdkVersion
+        targetSdk 35
+        versionCode 2
+        versionName "2.1"
+    }
+    buildFeatures {
+        aidl true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    def shizuku_version = "13.1.5"
+    implementation "dev.rikka.shizuku:api:$shizuku_version"
+    implementation "dev.rikka.shizuku:provider:$shizuku_version"
+    implementation 'io.github.petterpx:floatingx:2.3.7'
+    implementation 'io.github.petterpx:floatingx-compose:2.3.7'
+}
